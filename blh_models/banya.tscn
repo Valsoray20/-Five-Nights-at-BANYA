@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bhdcf40ki24r1"]
+
+[ext_resource type="PackedScene" uid="uid://c4fiqsnd3i7s3" path="res://models/banya.tscn" id="1_mujei"]
+[ext_resource type="PackedScene" uid="uid://gyqufqf8kgdn" path="res://models/okno.tscn" id="2_ofu0h"]
+[ext_resource type="PackedScene" uid="uid://cpsqsv241jmdm" path="res://models/dver.tscn" id="3_oherb"]
+[ext_resource type="Script" uid="uid://bs752uexb8fr2" path="res://script/vrash_dvery.gd" id="3_rc0tq"]
+[ext_resource type="Script" uid="uid://kdpx61u380ia" path="res://script/camera_3d.gd" id="4_oherb"]
+[ext_resource type="Script" uid="uid://csycpmbppxg70" path="res://script/vrash_okna.gd" id="5_rc0tq"]
+[ext_resource type="Script" uid="uid://bov47bfvhffiu" path="res://text_edit.gd" id="7_wuol5"]
+
+[node name="Node3D" type="Node3D" unique_id=1412296604]
+
+[node name="Node3D" parent="." unique_id=95251179 instance=ExtResource("1_mujei")]
+
+[node name="okno" parent="." unique_id=274080957 instance=ExtResource("2_ofu0h")]
+transform = Transform3D(-0.0020565218, 0, 0.9999979, 0, 1.1981686, 0, -0.9999979, 0, -0.0020565218, -3.992715, 1.1459215, 1.0071158)
+script = ExtResource("5_rc0tq")
+
+[node name="dver" parent="." unique_id=19791900 instance=ExtResource("3_oherb")]
+transform = Transform3D(-1.10064, 0, -0.0077067763, 0, 1.1877949, 0, 0.008476118, 0, -1.0007396, -1.369165, 0, 3.9240036)
+script = ExtResource("3_rc0tq")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=483277771]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1660094344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17709953, 3.3654685, 0)
+light_color = Color(0.99999946, 0.9980324, 0.8013488, 1)
+omni_range = 7.339667
+omni_attenuation = 0.027
+
+[node name="Node3D2" type="Node3D" parent="." unique_id=1252718329]
+transform = Transform3D(-0.8606105, 0, 0.50926375, 0, 1, 0, -0.50926375, 0, -0.8606105, 1.757303, 2.2386472, -2.4358249)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=67342127]
+script = ExtResource("4_oherb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=601036759]
+
+[node name="TextEdit" type="Label" parent="CanvasLayer" unique_id=1138231211]
+modulate = Color(1, 1, 1, 0.70980394)
+self_modulate = Color(1, 1, 1, 0.6901961)
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 118.0
+offset_bottom = 73.0
+script = ExtResource("7_wuol5")

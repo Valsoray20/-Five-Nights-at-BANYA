@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bhwo6w446108j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yf5fn"]
+size = Vector3(0.09094238, 1, 0.10852051)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(2.5547485, 0.07336426, 1.1297607)
+
+[node name="stol" type="StaticBody3D" unique_id=1991368259]
+transform = Transform3D(1, 0, 0, 0, 1.4236288, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1089481225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50744396, 0.51000404)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=538527639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011655092, 0.50744396, -0.51822853)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1033860081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4782724, 0.5066135, 0.51173425)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=531800301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.479438, 0.5066135, -0.5164983)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1149774479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2406564, 1.0407592, 0.004333496)
+mesh = SubResource("BoxMesh_g4v7s")

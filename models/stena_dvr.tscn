@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dtqnlwhjprw2h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(0.993804, 3.0142212, 0.14026642)
+
+[node name="stena s dveru" type="StaticBody3D" unique_id=19791900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99902153, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1509177356]
+transform = Transform3D(0.771567, 0, 0, 0, 1, 0, 0, 0, 1, 0.36671394, 1.5086844, -0.036670715)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=152821090]
+transform = Transform3D(0.771567, 0, 0, 0, 1, 0, 0, 0, 1, 2.679736, 1.5045764, -0.03754425)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=907228344]
+transform = Transform3D(1.7796198, 0, 0, 0, 0.07010193, 0, 0, 0, 1, 1.5545771, 2.9078724, -0.03754425)
+mesh = SubResource("BoxMesh_g4v7s")

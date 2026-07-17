@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c4fiqsnd3i7s3"]
+
+[ext_resource type="PackedScene" uid="uid://v2wm6xdxx6gi" path="res://models/poll.tscn" id="1_t8xtu"]
+[ext_resource type="PackedScene" uid="uid://bhwo6w446108j" path="res://models/stol.tscn" id="2_1o0ji"]
+[ext_resource type="PackedScene" uid="uid://oxatu0bx3s1f" path="res://models/stul.tscn" id="3_6w2qe"]
+[ext_resource type="PackedScene" uid="uid://ba4v7ya11kf" path="res://models/stena_obh.tscn" id="4_1o0ji"]
+[ext_resource type="PackedScene" uid="uid://cfnna456352s3" path="res://models/stena_okn.tscn" id="5_6w2qe"]
+[ext_resource type="PackedScene" uid="uid://dtqnlwhjprw2h" path="res://models/stena_dvr.tscn" id="6_utqgn"]
+
+[node name="Node3D" type="Node3D" unique_id=95251179]
+
+[node name="poll" parent="." unique_id=652662122 instance=ExtResource("1_t8xtu")]
+transform = Transform3D(4.084412, 0, 0, 0, 1, 0, 0, 0, 3.97988, 0.080681324, 0, -0.054679394)
+
+[node name="stol" parent="." unique_id=1991368259 instance=ExtResource("2_1o0ji")]
+transform = Transform3D(1, 0, 0, 0, 1.4236288, 0, 0, 0, 1, 2.9296243, 0, -1.5054789)
+
+[node name="stul" parent="." unique_id=999431638 instance=ExtResource("3_6w2qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7854582, 0, -2.5082026)
+
+[node name="StaticBody3D" parent="." unique_id=274080957 instance=ExtResource("4_1o0ji")]
+transform = Transform3D(-0.038176723, 0, 1.0161785, 0, 1.187291, 0, -8.218683, 0, -0.0047202646, 4.2145586, 0, 0.12791002)
+
+[node name="StaticBody3D2" parent="." unique_id=315098584 instance=ExtResource("4_1o0ji")]
+transform = Transform3D(-8.218401, 0, -0.009653575, 0, 1.187291, 0, 0.07807653, 0, -1.0161436, 0.27400112, 0, -4.090595)
+
+[node name="stena s oknom" parent="." unique_id=699038529 instance=ExtResource("5_6w2qe")]
+transform = Transform3D(-0.0020565218, 0, 0.9999979, 0, 1.1981686, 0, -0.9999979, 0, -0.0020565218, -3.9400525, 0, 1.0071158)
+
+[node name="stena_obichnaya" parent="." unique_id=473085586 instance=ExtResource("4_1o0ji")]
+transform = Transform3D(-0.011970948, 0, 1.0064243, 0, 1.1933687, 0, -2.1641762, 0, -0.005566946, -3.972501, 0, -2.9353127)
+
+[node name="stena_obichnaya2" parent="." unique_id=2000456055 instance=ExtResource("4_1o0ji")]
+transform = Transform3D(-0.011970948, 0, 1.0064243, 0, 1.1933687, 0, -2.1641762, 0, -0.005566946, -3.9538932, 0, 3.0106034)
+
+[node name="stena s dveru" parent="." unique_id=19791900 instance=ExtResource("6_utqgn")]
+transform = Transform3D(-1.10064, 0, -0.0077067763, 0, 1.1877949, 0, 0.008476118, 0, -1.0007396, -0.5380974, 0, 3.891718)
+
+[node name="StaticBody3D3" parent="." unique_id=2034646696 instance=ExtResource("4_1o0ji")]
+transform = Transform3D(-4.714845, 0, -0.0096188625, 0, 1.187291, 0, 0.044792015, 0, -1.0124898, 1.8703364, 0, 3.896041)
+
+[node name="poll2" parent="." unique_id=401542757 instance=ExtResource("1_t8xtu")]
+transform = Transform3D(4.084412, 0, 0, 0, 1, 0, 0, 0, 3.97988, 0.12700117, 3.537958, -0.13713312)
