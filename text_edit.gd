@@ -2,11 +2,10 @@ extends Label
 
 var counter: int = 0
 var timer: Timer
-var is_subtracting: bool = false
+var open_count: int = 0  # Считаем сколько объектов открыто
 
 func _ready() -> void:
 	text = str(counter)
-	print("Label готов, is_subtracting = ", is_subtracting)
 	
 	timer = Timer.new()
 	timer.wait_time = 2.0
@@ -15,17 +14,17 @@ func _ready() -> void:
 	add_child(timer)
 
 func _on_timer_timeout() -> void:
-	print("Тик таймера, is_subtracting = ", is_subtracting, ", counter = ", counter)
-	if is_subtracting:
-		counter -= 1
+	if open_count > 0:  # Если хотя бы одно окно/дверь открыты
+		if counter > 0:
+			counter -= open_count  # Вычитаем пропорционально количеству открытых
 	else:
-		counter += 1
+		counter += 1  # Всё закрыто — прибавляем
 	text = str(counter)
 
-func start_subtracting() -> void:
-	print("start_subtracting() вызван")
-	is_subtracting = true
+func window_opened() -> void:
+	open_count += 1
 
-func start_adding() -> void:
-	print("start_adding() вызван")
-	is_subtracting = false
+func window_closed() -> void:
+	open_count -= 1
+	if open_count < 0:
+		open_count = 0

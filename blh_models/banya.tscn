@@ -12,13 +12,15 @@
 
 [node name="Node3D" parent="." unique_id=95251179 instance=ExtResource("1_mujei")]
 
-[node name="okno" parent="." unique_id=274080957 instance=ExtResource("2_ofu0h")]
+[node name="okno" parent="." unique_id=274080957 node_paths=PackedStringArray("counter_label") instance=ExtResource("2_ofu0h")]
 transform = Transform3D(-0.0020565218, 0, 0.9999979, 0, 1.1981686, 0, -0.9999979, 0, -0.0020565218, -3.992715, 1.1459215, 1.0071158)
 script = ExtResource("5_rc0tq")
+counter_label = NodePath("../CanvasLayer/TextEdit")
 
-[node name="dver" parent="." unique_id=19791900 instance=ExtResource("3_oherb")]
+[node name="dver" parent="." unique_id=19791900 node_paths=PackedStringArray("counter_label") instance=ExtResource("3_oherb")]
 transform = Transform3D(-1.10064, 0, -0.0077067763, 0, 1.1877949, 0, 0.008476118, 0, -1.0007396, -1.369165, 0, 3.9240036)
 script = ExtResource("3_rc0tq")
+counter_label = NodePath("../CanvasLayer/TextEdit")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=483277771]
 
@@ -31,8 +33,9 @@ omni_attenuation = 0.027
 [node name="Node3D2" type="Node3D" parent="." unique_id=1252718329]
 transform = Transform3D(-0.8606105, 0, 0.50926375, 0, 1, 0, -0.50926375, 0, -0.8606105, 1.757303, 2.2386472, -2.4358249)
 
-[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=67342127]
+[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=67342127 node_paths=PackedStringArray("counter_label")]
 script = ExtResource("4_oherb")
+counter_label = NodePath("../../CanvasLayer/TextEdit")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=601036759]
 

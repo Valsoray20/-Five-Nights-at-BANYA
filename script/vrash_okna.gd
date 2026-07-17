@@ -1,8 +1,8 @@
-extends Node3D
+extends StaticBody3D
 
 @export var open_angle_degrees: float = 30.0
 @export var open_duration: float = 0.5
-@export var counter_label: Label
+@export var counter_label: Label  
 
 var is_open: bool = false
 var tween: Tween
@@ -26,10 +26,7 @@ func open():
 	tween.tween_property(self, "rotation:x", initial_rotation_x + deg_to_rad(open_angle_degrees), open_duration)
 	
 	if counter_label:
-		print("Окно открылось, вызываем start_subtracting()")
-		counter_label.start_subtracting()
-	else:
-		print("ОШИБКА: counter_label не назначен!")
+		counter_label.window_opened()
 
 func close():
 	is_open = false
@@ -37,7 +34,4 @@ func close():
 	tween.tween_property(self, "rotation:x", initial_rotation_x, open_duration)
 	
 	if counter_label:
-		print("Окно закрылось, вызываем start_adding()")
-		counter_label.start_adding()
-	else:
-		print("ОШИБКА: counter_label не назначен!")
+		counter_label.window_closed()
