@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ba4v7ya11kf" path="res://models/stena_obh.tscn" id="4_1o0ji"]
 [ext_resource type="PackedScene" uid="uid://cfnna456352s3" path="res://models/stena_okn.tscn" id="5_6w2qe"]
 [ext_resource type="PackedScene" uid="uid://dtqnlwhjprw2h" path="res://models/stena_dvr.tscn" id="6_utqgn"]
-[ext_resource type="PackedScene" uid="uid://b7rim7q1ehh3d" path="res://models/stena_peh.tscn" id="7_xtan1"]
 
 [node name="Node3D" type="Node3D" unique_id=95251179]
 
@@ -42,9 +41,6 @@ transform = Transform3D(-4.714845, 0, -0.0096188625, 0, 1.187291, 0, 0.044792015
 
 [node name="poll2" parent="." unique_id=401542757 instance=ExtResource("1_t8xtu")]
 transform = Transform3D(4.084412, 0, 0, 0, 1, 0, 0, 0, 3.97988, 0.12700117, 3.537958, -0.13713312)
-
-[node name="StaticBody3D4" parent="." unique_id=1684833301 instance=ExtResource("7_xtan1")]
-transform = Transform3D(0.43405533, 0, 0, 0, 1.1911845, 0, 0, 0, 1.2792974, 4.1797924, 0, 1.212526)
 
 [node name="StaticBody3D5" parent="." unique_id=780306131 instance=ExtResource("4_1o0ji")]
 transform = Transform3D(-0.0039374125, 0, 1.0110722, 0, 1.187291, 0, -0.84765464, 0, -0.0046964977, 4.2145586, 0, 3.5626512)

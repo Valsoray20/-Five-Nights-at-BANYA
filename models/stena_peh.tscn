@@ -8,6 +8,9 @@ size = Vector3(1, 1.3095703, 0.14941406)
 [sub_resource type="BoxMesh" id="BoxMesh_72kqk"]
 size = Vector3(1.50016, 0.16230011, 0.21954727)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(5.2362976, 1.572113, 1.5810547)
+
 [node name="StaticBody3D" type="StaticBody3D" unique_id=1684833301]
 transform = Transform3D(0.43405533, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
@@ -45,3 +48,8 @@ mesh = SubResource("BoxMesh_72kqk")
 
 [node name="StaticBody3D" parent="." unique_id=1792566825 instance=ExtResource("1_mwy0f")]
 transform = Transform3D(3.2826762, 0, 0, 0, 1, 0, 0, 0, 1, 3.159099, 0.09495562, 0.22932696)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2112139790]
+transform = Transform3D(0.43405533, 0, 0, 0, 1, 0, 0, 0, 1, 0.33837056, 0.7776947, 0.7553711)
+top_level = true
+shape = SubResource("BoxShape3D_g4v7s")

@@ -3,20 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://c4fiqsnd3i7s3" path="res://models/banya.tscn" id="1_mujei"]
 [ext_resource type="PackedScene" uid="uid://gyqufqf8kgdn" path="res://models/okno.tscn" id="2_ofu0h"]
 [ext_resource type="PackedScene" uid="uid://bewex2u8x7wxw" path="res://models/dver_peh.tscn" id="2_os4wd"]
-[ext_resource type="Script" uid="uid://cagrd6ilqgsmx" path="res://script/vrash_peh.gd" id="3_ngi3t"]
 [ext_resource type="PackedScene" uid="uid://cpsqsv241jmdm" path="res://models/dver.tscn" id="3_oherb"]
 [ext_resource type="Script" uid="uid://bs752uexb8fr2" path="res://script/vrash_dvery.gd" id="3_rc0tq"]
 [ext_resource type="Script" uid="uid://kdpx61u380ia" path="res://script/camera_3d.gd" id="4_oherb"]
 [ext_resource type="Script" uid="uid://csycpmbppxg70" path="res://script/vrash_okna.gd" id="5_rc0tq"]
 [ext_resource type="Script" uid="uid://bov47bfvhffiu" path="res://script/text_edit.gd" id="7_wuol5"]
+[ext_resource type="Script" uid="uid://b1ly271yv4fd6" path="res://script/peh.gd" id="8_sdfwn"]
+[ext_resource type="PackedScene" uid="uid://b7rim7q1ehh3d" path="res://models/stena_peh.tscn" id="9_doteo"]
+[ext_resource type="Script" uid="uid://daee5pcyoc6hi" path="res://script/canvas_layer.gd" id="11_doteo"]
 
 [node name="Node3D" type="Node3D" unique_id=1412296604]
 
 [node name="Node3D" parent="." unique_id=95251179 instance=ExtResource("1_mujei")]
-
-[node name="peh" parent="." unique_id=62116318 instance=ExtResource("2_os4wd")]
-transform = Transform3D(1.5201634, 0, 0, 0, 1.0861026, 0, 0, 0, 1.1581777, 4.097841, 0.17314786, 1.5845758)
-script = ExtResource("3_ngi3t")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00019180775, -1.1920929e-07, 0.0016833544)
 
 [node name="okno" parent="." unique_id=274080957 node_paths=PackedStringArray("counter_label") instance=ExtResource("2_ofu0h")]
 transform = Transform3D(-0.0020565218, 0, 0.9999979, 0, 1.1981686, 0, -0.9999979, 0, -0.0020565218, -3.992715, 1.1459215, 1.0071158)
@@ -40,6 +39,7 @@ omni_attenuation = 0.027
 transform = Transform3D(-0.8606105, 0, 0.50926375, 0, 1, 0, -0.50926375, 0, -0.8606105, 1.757303, 2.2386472, -2.4358249)
 
 [node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=67342127]
+far = 20.0
 script = ExtResource("4_oherb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=601036759]
@@ -47,8 +47,67 @@ script = ExtResource("4_oherb")
 [node name="TextEdit" type="Label" parent="CanvasLayer" unique_id=1138231211]
 modulate = Color(1, 1, 1, 0.70980394)
 self_modulate = Color(1, 1, 1, 0.6901961)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 27.0
 offset_top = 20.0
-offset_right = 118.0
-offset_bottom = 73.0
+offset_right = -1034.0
+offset_bottom = -575.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("7_wuol5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1955031445 node_paths=PackedStringArray("button", "progress_bar", "target_label", "stove_node")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1112.0
+offset_bottom = -608.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_doteo")
+button = NodePath("Button")
+progress_bar = NodePath("ProgressBar")
+target_label = NodePath("../TextEdit")
+stove_node = NodePath("../../peh")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=128851104]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.775002
+anchor_bottom = 16.207
+offset_left = 358.0
+offset_top = 85.0
+offset_right = -365.0
+offset_bottom = -536.28
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+max_value = 1.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1530340296]
+modulate = Color(0, 0, 0, 0.19607843)
+self_modulate = Color(0, 0, 0, 0.19607843)
+layout_mode = 0
+offset_left = 362.0
+offset_top = 141.0
+offset_right = 782.0
+offset_bottom = 509.0
+
+[node name="peh" type="Node3D" parent="." unique_id=814809780 node_paths=PackedStringArray("camera_marker")]
+script = ExtResource("8_sdfwn")
+camera_marker = NodePath("Marker3D")
+
+[node name="stena_peh" parent="peh" unique_id=1684833301 instance=ExtResource("9_doteo")]
+transform = Transform3D(0.43765247, 0, 0, 0, 1.200037, 0, 0, 0, 1.2484081, 4.177763, -1.1920929e-07, 1.255532)
+collision_layer = 8
+
+[node name="dwer_peh" parent="peh" unique_id=62116318 instance=ExtResource("2_os4wd")]
+transform = Transform3D(1.5201634, 0, 0, 0, 1.0861026, 0, 0, 0, 1.1581777, 4.097841, 0.17314786, 1.5845758)
+
+[node name="Marker3D" type="Marker3D" parent="peh" unique_id=2002202567]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6598094, 1.1801548, 2.187401)
