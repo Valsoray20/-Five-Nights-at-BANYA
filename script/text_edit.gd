@@ -1,6 +1,6 @@
 extends Label
 
-var counter: int = 0
+var counter: int = 25
 var timer: Timer
 var open_count: int = 0  # Считаем сколько объектов открыто
 
@@ -18,11 +18,15 @@ func _on_timer_timeout() -> void:
 		if counter > 0:
 			counter -= open_count  # Вычитаем пропорционально количеству открытых
 	else:
-		counter += 1  # Всё закрыто — прибавляем
+		counter += 1 
+	if counter < 0:
+		counter = 0
 	text = str(counter)
 
 func window_opened() -> void:
 	open_count += 1
+	if open_count < 0:
+		open_count = 0
 
 func window_closed() -> void:
 	open_count -= 1

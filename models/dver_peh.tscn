@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bewex2u8x7wxw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwy0f"]
+albedo_color = Color(18.892157, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yf5fn"]
+material = SubResource("StandardMaterial3D_mwy0f")
+size = Vector3(0.042419434, 1.1500854, 0.97473145)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(0.04800415, 1.1609421, 0.98864746)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=62116318]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=149691697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0355323, 0.5794316, 0.49888545)
+mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1096706221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035547554, 0.5788937, 0.5000451)
+shape = SubResource("BoxShape3D_g4v7s")

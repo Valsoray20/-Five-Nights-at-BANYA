@@ -2,15 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://c4fiqsnd3i7s3" path="res://models/banya.tscn" id="1_mujei"]
 [ext_resource type="PackedScene" uid="uid://gyqufqf8kgdn" path="res://models/okno.tscn" id="2_ofu0h"]
+[ext_resource type="PackedScene" uid="uid://bewex2u8x7wxw" path="res://models/dver_peh.tscn" id="2_os4wd"]
+[ext_resource type="Script" uid="uid://cagrd6ilqgsmx" path="res://script/vrash_peh.gd" id="3_ngi3t"]
 [ext_resource type="PackedScene" uid="uid://cpsqsv241jmdm" path="res://models/dver.tscn" id="3_oherb"]
 [ext_resource type="Script" uid="uid://bs752uexb8fr2" path="res://script/vrash_dvery.gd" id="3_rc0tq"]
 [ext_resource type="Script" uid="uid://kdpx61u380ia" path="res://script/camera_3d.gd" id="4_oherb"]
 [ext_resource type="Script" uid="uid://csycpmbppxg70" path="res://script/vrash_okna.gd" id="5_rc0tq"]
-[ext_resource type="Script" uid="uid://bov47bfvhffiu" path="res://text_edit.gd" id="7_wuol5"]
+[ext_resource type="Script" uid="uid://bov47bfvhffiu" path="res://script/text_edit.gd" id="7_wuol5"]
 
 [node name="Node3D" type="Node3D" unique_id=1412296604]
 
 [node name="Node3D" parent="." unique_id=95251179 instance=ExtResource("1_mujei")]
+
+[node name="peh" parent="." unique_id=62116318 instance=ExtResource("2_os4wd")]
+transform = Transform3D(1.5201634, 0, 0, 0, 1.0861026, 0, 0, 0, 1.1581777, 4.097841, 0.17314786, 1.5845758)
+script = ExtResource("3_ngi3t")
 
 [node name="okno" parent="." unique_id=274080957 node_paths=PackedStringArray("counter_label") instance=ExtResource("2_ofu0h")]
 transform = Transform3D(-0.0020565218, 0, 0.9999979, 0, 1.1981686, 0, -0.9999979, 0, -0.0020565218, -3.992715, 1.1459215, 1.0071158)
@@ -33,9 +39,8 @@ omni_attenuation = 0.027
 [node name="Node3D2" type="Node3D" parent="." unique_id=1252718329]
 transform = Transform3D(-0.8606105, 0, 0.50926375, 0, 1, 0, -0.50926375, 0, -0.8606105, 1.757303, 2.2386472, -2.4358249)
 
-[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=67342127 node_paths=PackedStringArray("counter_label")]
+[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=67342127]
 script = ExtResource("4_oherb")
-counter_label = NodePath("../../CanvasLayer/TextEdit")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=601036759]
 

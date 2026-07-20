@@ -1,8 +1,8 @@
 extends StaticBody3D
 
-@export var open_angle_degrees: float = 45.0
+@export var open_angle_degrees: float = 30.0
 @export var open_duration: float = 0.5
-@export var counter_label: Label
+@export var counter_label: Label  
 
 var is_open: bool = false
 var tween: Tween
