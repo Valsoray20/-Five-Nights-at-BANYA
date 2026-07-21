@@ -10,7 +10,172 @@
 [ext_resource type="Script" uid="uid://bov47bfvhffiu" path="res://script/text_edit.gd" id="7_wuol5"]
 [ext_resource type="Script" uid="uid://b1ly271yv4fd6" path="res://script/peh.gd" id="8_sdfwn"]
 [ext_resource type="PackedScene" uid="uid://b7rim7q1ehh3d" path="res://models/stena_peh.tscn" id="9_doteo"]
+[ext_resource type="Script" uid="uid://bw0fvh02j77av" path="res://script/progress_bar.gd" id="9_yfe6i"]
+[ext_resource type="Script" uid="uid://c0hnnarjid74h" path="res://script/button.gd" id="10_e24f4"]
 [ext_resource type="Script" uid="uid://daee5pcyoc6hi" path="res://script/canvas_layer.gd" id="11_doteo"]
+[ext_resource type="PackedScene" uid="uid://bi3e4kxoiw573" path="res://models/polka_drova.tscn" id="12_mntpb"]
+[ext_resource type="Script" uid="uid://dilhi0ici40w4" path="res://script/polka_drova.gd" id="15_3ragj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g4v7s"]
+top_radius = 0.103027344
+bottom_radius = 0.103027344
+height = 0.8006592
+
+[sub_resource type="Animation" id="Animation_yfe6i"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-5.6074357, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.63901937, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.4787868, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../peh/dwer_peh:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../peh/dwer_peh:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../peh/dwer_peh:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_e24f4"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_3ragj"]
+resource_name = "plus_drova"
+length = 5.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-5.6074357, -0.25, 0, 0.25, 0, -1.9520408, -0.083333336, -0.60923254, 0, 0, 1.0733778, -0.5833334, -0.50423646, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.63901937, -0.25, 0, 0.25, 0, 0.6390194, -0.083333336, -9.934108e-09, 0, 0, 0.6390195, -0.5833334, -9.934109e-09, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-1.4787868, -0.25, 0, 0.25, 0, -1.4787868, -0.083333336, 0, 0, 0, -1.4787868, -0.5833334, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../peh/dwer_peh:rotation:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0, 0, -0.16666667, 0, 0, 0, 0, -0.16333334, 0, 0, 0, 0, -0.17, 0, 0, 0),
+"times": PackedFloat32Array(0, 1, 2, 2.98, 4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../peh/dwer_peh:rotation:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0, -0.9948377, -0.16666667, 0.1658063, 0, 0, -0.9948377, -0.16333334, 0, 0, 0, 0, -0.17, -0.1658063, 0, 0),
+"times": PackedFloat32Array(0, 1, 2, 2.98, 4)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../peh/dwer_peh:rotation:z")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0, 0, -0.16666667, 0, 0, 0, 0, -0.16333334, 0, 0, 0, 0, -0.17, 0, 0, 0),
+"times": PackedFloat32Array(0, 1, 2, 2.98, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h676e"]
+_data = {
+&"RESET": SubResource("Animation_yfe6i"),
+&"new_animation": SubResource("Animation_e24f4"),
+&"plus_drova": SubResource("Animation_3ragj")
+}
 
 [node name="Node3D" type="Node3D" unique_id=1412296604]
 
@@ -59,7 +224,7 @@ grow_vertical = 2
 script = ExtResource("7_wuol5")
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1955031445 node_paths=PackedStringArray("button", "progress_bar", "target_label", "stove_node")]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1955031445 node_paths=PackedStringArray("stove_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,9 +234,6 @@ offset_bottom = -608.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("11_doteo")
-button = NodePath("Button")
-progress_bar = NodePath("ProgressBar")
-target_label = NodePath("../TextEdit")
 stove_node = NodePath("../../peh")
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=128851104]
@@ -88,8 +250,9 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 max_value = 1.0
+script = ExtResource("9_yfe6i")
 
-[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1530340296]
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1530340296 node_paths=PackedStringArray("progress_bar", "firewood_shelf", "target_label")]
 modulate = Color(0, 0, 0, 0.19607843)
 self_modulate = Color(0, 0, 0, 0.19607843)
 layout_mode = 0
@@ -97,17 +260,68 @@ offset_left = 362.0
 offset_top = 141.0
 offset_right = 782.0
 offset_bottom = 509.0
+script = ExtResource("10_e24f4")
+progress_bar = NodePath("../ProgressBar")
+firewood_shelf = NodePath("../../../polka")
+target_label = NodePath("../../TextEdit")
 
 [node name="peh" type="Node3D" parent="." unique_id=814809780 node_paths=PackedStringArray("camera_marker")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.794614, 0, 0.46479905)
 script = ExtResource("8_sdfwn")
 camera_marker = NodePath("Marker3D")
 
 [node name="stena_peh" parent="peh" unique_id=1684833301 instance=ExtResource("9_doteo")]
-transform = Transform3D(0.43765247, 0, 0, 0, 1.200037, 0, 0, 0, 1.2484081, 4.177763, -1.1920929e-07, 1.255532)
+transform = Transform3D(0.43765247, 0, 0, 0, 1.200037, 0, 0, 0, 1.2484081, 0.38265514, -1.1920929e-07, 0.012973785)
 collision_layer = 8
 
-[node name="dwer_peh" parent="peh" unique_id=62116318 instance=ExtResource("2_os4wd")]
-transform = Transform3D(1.5201634, 0, 0, 0, 1.0861026, 0, 0, 0, 1.1581777, 4.097841, 0.17314786, 1.5845758)
+[node name="dwer_peh" parent="peh" unique_id=62116318 node_paths=PackedStringArray("counter_label") instance=ExtResource("2_os4wd")]
+transform = Transform3D(1.5201637, 0, 0, 0, 1.0861028, 0, 0, 0, 1.1581777, 0.6263206, 0.17314786, 0.34201753)
+counter_label = NodePath("../../CanvasLayer/TextEdit")
 
 [node name="Marker3D" type="Marker3D" parent="peh" unique_id=2002202567]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6598094, 1.1801548, 2.187401)
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1.0000001, 0, 1.0000001, 0, -4.3711392e-08, -2.15625, 1.1801549, 0.9475564)
+
+[node name="polka" parent="." unique_id=1605547180 node_paths=PackedStringArray("log_meshes") instance=ExtResource("12_mntpb")]
+transform = Transform3D(1.5189928, 0, 0, 0, 1.3435223, 0, 0, 0, 1.3459193, 3.8219213, 0, 3.731645)
+script = ExtResource("15_3ragj")
+log_meshes = [NodePath("brev1"), NodePath("brev2"), NodePath("brev3"), NodePath("brev4"), NodePath("brev5"), NodePath("brev6"), NodePath("brev7"), NodePath("brev8")]
+
+[node name="brev1" type="MeshInstance3D" parent="polka" unique_id=1594161620]
+transform = Transform3D(1.0000029, 0, 0, 0, -4.371388e-08, -1.000039, 0, 1.0000395, -4.3713857e-08, -0.34423542, 0.5932345, -0.3910668)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev2" type="MeshInstance3D" parent="polka" unique_id=1177627382]
+transform = Transform3D(0.99387246, 0.110565364, -4.8330486e-09, 0, -4.3713897e-08, -1.000039, -0.11056131, 0.99390876, -4.3445876e-08, -0.6074692, 0.5932346, -0.3648324)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev3" type="MeshInstance3D" parent="polka" unique_id=603123157]
+transform = Transform3D(0.9961857, -0.08730049, 3.8160914e-09, 0, -4.3713907e-08, -1.000039, 0.08729728, 0.9962221, -4.3546994e-08, -0.9148818, 0.5932346, -0.34749556)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev4" type="MeshInstance3D" parent="polka" unique_id=1679179101]
+transform = Transform3D(1.0000029, 0, 0, 0, -4.3713882e-08, -1.000039, 0, 1.0000395, -4.371386e-08, -1.1670645, 0.59323454, -0.3910668)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev5" type="MeshInstance3D" parent="polka" unique_id=357397738]
+transform = Transform3D(-0.9999569, -0.009606683, 4.1992865e-10, 0, -4.3713897e-08, -1.000039, 0.009606331, -0.99999344, 4.3711857e-08, -1.2567445, 1.0594975, -0.35167432)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev6" type="MeshInstance3D" parent="polka" unique_id=1457128478]
+transform = Transform3D(-0.99115926, 0.13271081, -5.8010774e-09, 1.2666194e-15, -4.3713925e-08, -1.0000391, -0.13270599, -0.9911953, 4.332728e-08, -0.94380045, 1.0594978, -0.38076162)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev7" type="MeshInstance3D" parent="polka" unique_id=1377220869]
+transform = Transform3D(-0.99181247, -0.12773873, 5.58373e-09, 0, -4.3713925e-08, -1.000039, 0.12773407, -0.9918485, 4.3355815e-08, -0.6030276, 1.0594978, -0.4014306)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev8" type="MeshInstance3D" parent="polka" unique_id=87106052]
+transform = Transform3D(-0.9999569, -0.009606683, 4.199287e-10, 0, -4.37139e-08, -1.000039, 0.009606331, -0.99999344, 4.371186e-08, -0.31889653, 1.0594978, -0.36059523)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="brev9" type="MeshInstance3D" parent="polka" unique_id=1756649920]
+transform = Transform3D(-4.371159e-08, 1.0000403, -4.3713158e-08, 0, -4.3713168e-08, -1.000039, -1.0000032, -4.3713168e-08, 1.91076e-15, -5.6074357, 0.63901937, -1.4787868)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=839798300]
+root_node = NodePath("../polka/brev9")
+libraries/ = SubResource("AnimationLibrary_h676e")

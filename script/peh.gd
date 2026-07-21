@@ -11,25 +11,18 @@ var is_viewing: bool = false
 var tween: Tween
 
 func interact():
-	if is_viewing:
-		return
-
+	if is_viewing: return
 	var cam = get_viewport().get_camera_3d()
-	if not cam or not camera_marker:
-		return
-
+	if not cam or not camera_marker: return
 	original_camera_transform = cam.global_transform
 	is_viewing = true
-
 	tween = create_tween().set_parallel(true)
 	tween.tween_property(cam, "global_position", camera_marker.global_position, transition_duration).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(cam, "global_rotation", camera_marker.global_rotation, transition_duration).set_ease(Tween.EASE_IN_OUT)
 	tween.chain().tween_callback(func(): emit_signal("camera_approached"))
 
 func _input(event):
-	if not is_viewing:
-		return
-
+	if not is_viewing: return
 	if event.is_action_pressed("ui_cancel") or (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed):
 		exit_view()
 
