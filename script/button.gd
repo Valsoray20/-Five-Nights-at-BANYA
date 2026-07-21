@@ -3,6 +3,7 @@ extends Button
 @export var progress_bar: ProgressBar
 @export var firewood_shelf: Node
 @export var target_label: Label
+@export var animation_player: AnimationPlayer
 
 var hold_time: float = 0.0
 const REQUIRED_TIME: float = 5.0
@@ -13,17 +14,29 @@ func _process(delta):
 		hold_time += delta
 		if progress_bar:
 			progress_bar.value = hold_time / REQUIRED_TIME
+
+		# Запускаем анимацию, если она не проигрывается
+		if animation_player and not animation_player.is_playing():
+			animation_player.play("plus_drova")
+
 		if hold_time >= REQUIRED_TIME:
 			# Попытаться взять бревно и нагреть
 			if firewood_shelf and firewood_shelf.has_method("can_take_log") and firewood_shelf.can_take_log():
 				firewood_shelf.remove_one_log()
 				if target_label and target_label.has_method("add_temperature"):
 					target_label.add_temperature(HEAT_AMOUNT)
+
 			# Сброс после полного цикла
 			hold_time = 0.0
 			if progress_bar:
 				progress_bar.value = 0.0
+			if animation_player:
+				animation_player.stop()
+				animation_player.seek(0.0)
 	else:
 		hold_time = 0.0
 		if progress_bar:
 			progress_bar.value = 0.0
+		if animation_player:
+			animation_player.stop()
+			animation_player.seek(0.0)
