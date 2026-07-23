@@ -1,3 +1,4 @@
+
 extends StaticBody3D
 
 @export var open_angle_degrees: float = 30.0

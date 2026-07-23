@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7rim7q1ehh3d"]
 
-[ext_resource type="PackedScene" uid="uid://bmd03icndn45w" path="res://models/peh.tscn" id="1_mwy0f"]
+[ext_resource type="PackedScene" uid="uid://bmd03icndn45w" path="res://models-scens/peh.tscn" id="1_mwy0f"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_yf5fn"]
 size = Vector3(1, 1.3095703, 0.14941406)

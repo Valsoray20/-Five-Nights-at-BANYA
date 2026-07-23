@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c4fiqsnd3i7s3"]
 
-[ext_resource type="PackedScene" uid="uid://v2wm6xdxx6gi" path="res://models/poll.tscn" id="1_t8xtu"]
-[ext_resource type="PackedScene" uid="uid://bhwo6w446108j" path="res://models/stol.tscn" id="2_1o0ji"]
-[ext_resource type="PackedScene" uid="uid://oxatu0bx3s1f" path="res://models/stul.tscn" id="3_6w2qe"]
-[ext_resource type="PackedScene" uid="uid://ba4v7ya11kf" path="res://models/stena_obh.tscn" id="4_1o0ji"]
-[ext_resource type="PackedScene" uid="uid://cfnna456352s3" path="res://models/stena_okn.tscn" id="5_6w2qe"]
-[ext_resource type="PackedScene" uid="uid://dtqnlwhjprw2h" path="res://models/stena_dvr.tscn" id="6_utqgn"]
+[ext_resource type="PackedScene" uid="uid://v2wm6xdxx6gi" path="res://models-scens/poll.tscn" id="1_t8xtu"]
+[ext_resource type="PackedScene" uid="uid://bhwo6w446108j" path="res://models-scens/stol.tscn" id="2_1o0ji"]
+[ext_resource type="PackedScene" uid="uid://oxatu0bx3s1f" path="res://models-scens/stul.tscn" id="3_6w2qe"]
+[ext_resource type="PackedScene" uid="uid://ba4v7ya11kf" path="res://models-scens/stena_obh.tscn" id="4_1o0ji"]
+[ext_resource type="PackedScene" uid="uid://cfnna456352s3" path="res://models-scens/stena_okn.tscn" id="5_6w2qe"]
+[ext_resource type="PackedScene" uid="uid://dtqnlwhjprw2h" path="res://models-scens/stena_dvr.tscn" id="6_utqgn"]
 
 [node name="Node3D" type="Node3D" unique_id=95251179]
 

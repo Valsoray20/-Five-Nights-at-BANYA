@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cy80tw8kscsu5"
+path="res://.godot/imported/monitor.obj-e0f96210e3487195bfba75b2f723002f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/monitor.obj-e0f96210e3487195bfba75b2f723002f.mesh"]
+
+source_file="res://krut_models/monitor.obj"
+dest_files=["res://.godot/imported/monitor.obj-e0f96210e3487195bfba75b2f723002f.mesh", "res://.godot/imported/monitor.obj-e0f96210e3487195bfba75b2f723002f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
